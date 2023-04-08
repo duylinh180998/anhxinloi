@@ -113,6 +113,15 @@
         var foot = tree.footer;
         var hold = 1;
 
+			  var click1 = 0
+			  var bodyclick = $('body')
+			  bodyclick.click(function (e) {
+			  	if (click1 == 0) {
+						var audio = new Audio('music.mp3');
+						audio.play();
+						click1 ++;
+					}
+				})
         canvas.click(function(e) {
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
